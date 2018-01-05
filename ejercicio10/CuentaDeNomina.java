@@ -6,13 +6,15 @@ public class CuentaDeNomina extends Cuenta{
 	private final float comision;
 	
 	public CuentaDeNomina(float comision, float nomina, float interes, Cliente titular, float saldo){
-		super(titular,saldo);
+		super(titular);
 		assert (comision >0);
 		this.comision = comision;
 		assert (interes >0);
 		this.interes = interes;
 		assert(nomina> 0);
 		this.nomina = nomina;
+		assert (getSaldo()>=-nomina);
+		setSaldo(saldo);
 		
 	}
 	

@@ -5,11 +5,13 @@ public class CuentaCredito extends Cuenta{
 	private final float minimo;
 	
 	public CuentaCredito(float comision, float minimo, Cliente titular, float saldo){
-		super(titular,saldo);
+		super(titular);
 		assert (comision >0);
 		this.comision = comision;
 		assert (minimo<0);
 		this.minimo = minimo;
+		assert (getSaldo()>=minimo);
+		setSaldo(saldo);
 	}
 	
 	@Override

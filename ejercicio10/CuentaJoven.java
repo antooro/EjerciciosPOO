@@ -5,7 +5,7 @@ public class CuentaJoven extends CuentaAhorro {
 	public CuentaJoven(float interes, Cliente titular, float saldo){
 		super(interes ,titular,saldo);
 		assert(titular.getEdad()<25);
-		assert (interes > 0);
+		assert (interes >= 0);
 		this.interes = interes;
 		
 	}

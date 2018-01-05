@@ -5,10 +5,10 @@ public class Cuenta {
 	private Cliente titular;
 	private float saldo;
 	
-	public Cuenta(Cliente titular, float saldo){
+	public Cuenta(Cliente titular){
 		assert(titular!= null);
 		this.titular = titular;
-		setSaldo(saldo);
+		this.saldo = 0;
 	}
 
 	public Cliente getTitular() {
@@ -26,7 +26,7 @@ public class Cuenta {
 	 * 
 	 */
 	public void reintegro(float cantidad){
-		assert (cantidad>0 && getSaldo()-cantidad>=0);
+		assert(saldo - cantidad > 0) :"No puedes sacar mas dinero del que tienes";
 		saldo -= cantidad;
 	}
 	
