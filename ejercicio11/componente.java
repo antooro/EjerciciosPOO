@@ -1,6 +1,6 @@
 package ejercicio11;
 
-public class componente{
+public abstract class componente{
 	private String nombre_fabricante;
 	private String modelo;
 	private double precio;
