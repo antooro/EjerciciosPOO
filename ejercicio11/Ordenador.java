@@ -55,7 +55,7 @@ public class Ordenador {
 		if (c instanceof salida && eliminaSalida()){
 			ordenador.remove(c);
 		}
-		else if (c instanceof entrada && eliminaSalida()){
+		else if (c instanceof entrada && eliminaEntrada()){
 			ordenador.remove(c);
 		}
 	}
